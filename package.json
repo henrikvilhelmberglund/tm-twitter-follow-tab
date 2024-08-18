@@ -1,0 +1,35 @@
+{
+  "name": "tm-template",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@sec-ant/gm-fetch": "^1.2.1",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/bun": "^1.1.6",
+    "commit-and-tag-version": "^12.4.1",
+    "open": "^10.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.6",
+    "svelte": "^5.0.0-next.224",
+    "svelte-check": "^3.8.5",
+    "svelte-preprocess": "^5.1.4",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4",
+    "unocss": "^0.62.2",
+    "vite": "^5.4.1",
+    "vite-plugin-monkey": "^4.0.6"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bun createRequireFile.ts",
+    "style": "vite",
+    "postdev": "msedge $(pwd)/require.user.js",
+    "require": "msedge $(pwd)/require.user.js",
+    "build": "vite build --watch",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "release": "commit-and-tag-version",
+    "postrelease": "git push --follow-tags origin main"
+  },
+  "type": "module"
+}
