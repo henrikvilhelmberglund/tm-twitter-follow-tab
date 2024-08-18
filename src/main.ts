@@ -4,8 +4,8 @@ import App from "./App.svelte";
 import "uno.css";
 
 // use to target an element on the website, here targeting a google div
-const customTarget = document.querySelector("div.o3j99.qarstb");
-// const customTarget = "";
+// const customTarget = document.querySelector("div.o3j99.qarstb");
+const customTarget = "";
 
 const app = mount(App, {
 	target: (() => {
